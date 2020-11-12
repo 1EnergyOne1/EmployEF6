@@ -1,16 +1,16 @@
 ﻿namespace EmployEF6
 {
-    partial class Form1
+    partial class Regestration
     {
         /// <summary>
-        /// Обязательная переменная конструктора.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Освободить все используемые ресурсы.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,11 +20,11 @@
             base.Dispose(disposing);
         }
 
-        #region Код, автоматически созданный конструктором форм Windows
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -38,28 +38,28 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(30, 157);
+            this.button1.Location = new System.Drawing.Point(43, 162);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 23);
+            this.button1.Size = new System.Drawing.Size(125, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Вход";
+            this.button1.Text = "Зарегистрироваться";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(158, 157);
+            this.button2.Location = new System.Drawing.Point(192, 162);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 23);
+            this.button2.Size = new System.Drawing.Size(125, 23);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Регистрация";
+            this.button2.Text = "Отмена";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 37);
+            this.label1.Location = new System.Drawing.Point(40, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 2;
@@ -68,7 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 97);
+            this.label2.Location = new System.Drawing.Point(40, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 3;
@@ -76,31 +76,31 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(106, 37);
+            this.textBox1.Location = new System.Drawing.Point(108, 50);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 20);
+            this.textBox1.Size = new System.Drawing.Size(209, 20);
             this.textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(106, 97);
+            this.textBox2.Location = new System.Drawing.Point(108, 101);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 20);
+            this.textBox2.Size = new System.Drawing.Size(209, 20);
             this.textBox2.TabIndex = 5;
             // 
-            // Form1
+            // Regestration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(287, 222);
+            this.ClientSize = new System.Drawing.Size(340, 223);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Авторизация";
+            this.Name = "Regestration";
+            this.Text = "Регистрация";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,8 +112,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        protected internal System.Windows.Forms.TextBox textBox1;
+        protected internal System.Windows.Forms.TextBox textBox2;
     }
 }
-
