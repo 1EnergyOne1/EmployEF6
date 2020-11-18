@@ -34,8 +34,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.EmployName = new System.Windows.Forms.TextBox();
+            this.EmploySorname = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,6 +49,7 @@
             // 
             // button1
             // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button1.Location = new System.Drawing.Point(527, 229);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -95,27 +96,27 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Фамилия";
             // 
-            // textBox1
+            // EmployName
             // 
-            this.textBox1.Location = new System.Drawing.Point(593, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 6;
+            this.EmployName.Location = new System.Drawing.Point(593, 40);
+            this.EmployName.Name = "EmployName";
+            this.EmployName.Size = new System.Drawing.Size(200, 20);
+            this.EmployName.TabIndex = 6;
             // 
-            // textBox2
+            // EmploySorname
             // 
-            this.textBox2.Location = new System.Drawing.Point(593, 103);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 20);
-            this.textBox2.TabIndex = 7;
+            this.EmploySorname.Location = new System.Drawing.Point(593, 103);
+            this.EmploySorname.Name = "EmploySorname";
+            this.EmploySorname.Size = new System.Drawing.Size(200, 20);
+            this.EmploySorname.TabIndex = 7;
             // 
             // Employ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 284);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.EmploySorname);
+            this.Controls.Add(this.EmployName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
@@ -138,7 +139,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        protected internal System.Windows.Forms.TextBox EmployName;
+        protected internal System.Windows.Forms.TextBox EmploySorname;
     }
 }

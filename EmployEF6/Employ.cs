@@ -25,11 +25,14 @@ namespace EmployEF6
         //Добавление
         private void button1_Click(object sender, EventArgs e)
         {
-            Employ EmForm = new Employ();
-            Employy empl = new Employy();
+            AddEmploy AddForm = new AddEmploy();
 
-            empl.Name = EmForm.textBox1.Text;
-            empl.Sorname = EmForm.textBox2.Text;                      
+            DialogResult result = AddForm.ShowDialog(this);
+            if (result == DialogResult.Cancel)
+                return;
+            Employy empl = new Employy(); // Выделение памяти для модели базы сотрудников            
+            empl.Name = AddForm.EmployName.Text;
+            empl.Sorname = AddForm.EmploySorname.Text;                      
             
             db.Employes.Add(empl);
             db.SaveChanges();
@@ -52,17 +55,18 @@ namespace EmployEF6
 
                 Employ emForm = new Employ();
 
-                emForm.textBox1.Text = emp.Name;
-                emForm.textBox2.Text = emp.Sorname;
+                emForm.EmployName.Text = emp.Name;
+                emForm.EmploySorname.Text = emp.Sorname;
 
                 DialogResult result = emForm.ShowDialog(this);
 
                 if (result == DialogResult.Cancel)
                     return;
 
-                emp.Name = emForm.textBox1.Text;
-                emp.Sorname = emForm.textBox2.Text;
+                emp.Name = emForm.EmployName.Text;
+                emp.Sorname = emForm.EmploySorname.Text;
 
+                db.Entry(emp).State = EntityState.Modified;
                 db.SaveChanges();
                 dataGridView1.Refresh();
                 MessageBox.Show("Данные сотрудника обновлены");
@@ -72,18 +76,22 @@ namespace EmployEF6
         //Удаление
         private void button3_Click(object sender, EventArgs e)
         {
-            int index = dataGridView1.SelectedRows[0].Index;
-            int id = 0;
-            bool converted = Int32.TryParse(dataGridView1[0, index].Value.ToString(), out id);
-            if (converted == false)
-                return;
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int index = dataGridView1.SelectedRows[0].Index;
+                int id = 0;
+                bool converted = Int32.TryParse(dataGridView1[0, index].Value.ToString(), out id);
+                if (converted == false)
+                    return;
 
-            Employy player = db.Employes.Find(id);
+                Employy player = db.Employes.Find(id);
 
-            db.Employes.Remove(player);
-            db.SaveChanges();
+                db.Employes.Remove(player);
+                db.SaveChanges();
 
-            MessageBox.Show("Сотрудник удален");
+                MessageBox.Show("Сотрудник удален");
+            }
+            
         }      
 
         
